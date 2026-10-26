@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: user
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    bootstrap-servers:
+      - localhost:9092
+
+server:
+  shutdown: graceful
+  lifecycle:
+    timeout-per-shutdown: 20s
